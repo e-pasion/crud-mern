@@ -1,3 +1,3 @@
 import axios from './axios'
 
-export const getTagsRequest= async () => await axios.get(`/tags`);
+export const getTagsRequest= () => axios.get(`/tags`);
