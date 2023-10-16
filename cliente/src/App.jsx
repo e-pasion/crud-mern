@@ -1,14 +1,18 @@
-import { useState } from 'react'
+
 import { Route, Routes } from 'react-router-dom'
 import Tags from './pages/Tags'
+import TagForm from './pages/TagForm'
+import Home from './pages/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
     <Routes>
-      <Route path='/' element={<Tags/>}/>
+      <Route path='/' element={<Home/>}/>,
+      <Route path='/tags' element={<Tags/>}/>
+      <Route path='/newTag' element={<TagForm/>}/>
     </Routes>
     </>
   )
