@@ -1,6 +1,7 @@
 import express from "express";
 import connectDB from "./config/db.js";
 import recipeRoutes from "./routes/recipe.route.js"
+import ingredientRoutes from "./routes/ingredient.route.js"
 import tagRoutes from "./routes/tag.route.js"
 import cors from 'cors'
 import morgan from "morgan";
@@ -16,9 +17,9 @@ APP.use(cors({
 }))
 APP.use(morgan('dev'));
 
-
 APP.use('/api/recipes', recipeRoutes);
 APP.use('/api/tags',tagRoutes)
+APP.use('/api/ingredients',ingredientRoutes);
 
 APP.listen(PORT,()=>{
     console.log(`http://localhost:${PORT}`); // la funcion listen escucha el puerto que se le indique y cuando el servidor cargue se ejecutara todo dentro de la funcion

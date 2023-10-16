@@ -18,6 +18,11 @@ const recipeSchema= new mongoose.Schema({ // creamos un nuevo Schema que sera co
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Tag',
         require:true
+    },
+    ingredient:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Ingredient',
+        require:true,
     }
     
 })
